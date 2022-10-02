@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ada Comics</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="conteiner">
+        <header>
+            <div class="logo-container d-flex">
+                <h1 class="title text-center">ada comics</h1>
+            </div>
+
+            <div class="hero w-100"></div>
+        </header>
+        
+        <!-- BARRA DE BUSQUEDA -->
+        <nav class="navbar navbar-light bg-light mx-auto">
+            <form class="form-inline d-flex align-items-center">
+                <input class="form-control mr-sm-2" type="search" placeholder="Ingresá tu búsqueda" aria-label="Search">
+                <div class="dropdown m-1 d-flex align-items-center">
+                    <strong>TIPO</strong>
+                    <select class="form-select " aria-label="Default select example" id="search-type">
+                        <option value="comic">COMIC</option>
+                        <option value="personajes">PERSONAJES</option>
+                    </select>
+                </div>
+
+                <div class="dropdown m-1 d-flex align-items-center">
+                    <strong>ORDEN</strong>
+                <select class="form-select" aria-label="Default select example">
+                    <option value="a-z">A-Z</option>
+                    <option value="z-as">Z-A</option>
+                    <option value="nuevos">Más nuevos</option>
+                    <option value="viejos">Más viejos</option>
+                </select>
+                </div>
+
+                <button class="btn my-2 my-sm-0 bg-black text-white m-1 btn-hover" type="submit">Buscar</button>
+            </form>
+        </nav>
+        <div class="comics d-none">
+            <h4>Publicado:</h4>
+            <h4>Guionistas:</h4>
+            <h4>Descripción:</h4>
+        </div>
+
+        <div class="resultados d-none">
+            <h4>Resultados</h4>
+            <h5>Resultados 0</h5>
+        </div>
+
+        <div class="paginador d-flex justify-content-center">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <footer class="">
+            hecho con 
+        </footer>
+    </div>
+    <script src="./app.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
