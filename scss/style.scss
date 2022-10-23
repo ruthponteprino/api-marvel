@@ -1,0 +1,12 @@
+@import 'header';
+@import url(https://fonts.googleapis.com/css2?family=Bangers&display=swap);
+
+$font-title: 'Bangers', cursive;
+
+.title {
+    font-family: $font-title;
+}
+
+.d-none {
+    display: none;
+}

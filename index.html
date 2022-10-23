@@ -24,16 +24,16 @@
             <form class="form-inline d-flex align-items-center">
                 <input class="form-control mr-sm-2" type="search" placeholder="Ingresá tu búsqueda" aria-label="Search">
                 <div class="dropdown m-1 d-flex align-items-center">
-                    <strong>TIPO</strong>
+                    <label for="type-search"><strong>TIPO</strong></label>
                     <select class="form-select " aria-label="Default select example" id="search-type">
-                        <option value="comic">COMIC</option>
+                        <option value="comics">COMICS</option>
                         <option value="personajes">PERSONAJES</option>
                     </select>
                 </div>
 
                 <div class="dropdown m-1 d-flex align-items-center">
-                    <strong>ORDEN</strong>
-                <select class="form-select" aria-label="Default select example">
+                    <label for="search-sort"><strong>ORDEN</strong></label>
+                <select class="form-select" aria-label="Default select example" id="search-sort">
                     <option value="a-z">A-Z</option>
                     <option value="z-as">Z-A</option>
                     <option value="nuevos">Más nuevos</option>
@@ -44,15 +44,22 @@
                 <button class="btn my-2 my-sm-0 bg-black text-white m-1 btn-hover" type="submit">Buscar</button>
             </form>
         </nav>
-        <div class="comics d-none">
+        
+        <div class="comic-section d-none">
+            <img class="comic-cover"></img>
+            <h2 class="comic-title"></h2>
             <h4>Publicado:</h4>
+            <p class="comic-published"></p>
             <h4>Guionistas:</h4>
+            <p class="comic-writers"></p>
             <h4>Descripción:</h4>
+            <p class="comic-description"></p>
         </div>
 
-        <div class="resultados d-none">
+        <div class="resultados">
             <h4>Resultados</h4>
-            <h5>Resultados 0</h5>
+            <span id="results-numbers">0</span>
+            <div id="results"></div>
         </div>
 
         <div class="paginador d-flex justify-content-center">

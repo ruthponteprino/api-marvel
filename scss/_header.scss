@@ -1,0 +1,29 @@
+
+
+.logo-container {
+    background-color: #000;
+        h1 {
+        color: #fff;
+        background-color: #ff0000;
+        width: 200px;
+        margin: 0;
+    }
+}
+
+.hero {
+    background: rgba(0, 0, 0, 0.6) url(../images/hero.jpg) center center no-repeat;
+    background-size: cover;
+    height: 50vh;
+    position: relative;
+}
+
+.form-inline {
+    width: 100%;
+    .form-control{
+        width: 50%;
+    }
+}
+
+.d-flex {
+    justify-content: center;
+}
