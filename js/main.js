@@ -1,19 +1,22 @@
 /////////////////////////////
 // -- CARGA DE COMICS --  //
 ///////////////////////////
-const loadComics = async () => {
+const loadComics = async (orderBy) => {
 
     const params = new URLSearchParams(window.location.search) //define valores de la url
-    const comicsResponse = await getComics(params.get('offset') || 0 , params.get('order') || 'title')
+    const comicsResponse = await getComics(0 , orderBy || 'title')
     const data = comicsResponse.data
     const comics = data.results
 
-    const results = document.getElementById('comics-results')
+    const results = document.getElementById('comics-results');
     const container = document.createElement('div')
     const row = document.createElement('div')
+    results.innerHTML = ""
 
     results.appendChild(container)
     container.appendChild(row)
+
+    
 
     comics.forEach(comic => {
 
@@ -45,14 +48,14 @@ const loadComics = async () => {
     });
 }
 
-loadComics()
+// loadComics()
 
 
 /////////////////////////////////
 // -- CARGA DE PERSONAJES --  //
 ///////////////////////////////
-const loadCharacters = async () => {
-    const charactersResponse = await getCharacters()
+const loadCharacters = async (orderBy) => {
+    const charactersResponse = await getCharacters(orderBy)
     const data = charactersResponse.data
     const characters = data.results
     
@@ -111,11 +114,11 @@ formSearch.addEventListener('submit', (e) => {
 
 
     if(type === 'comics'){
-        loadComics()
+        loadComics(orderBy)
         resultsCharacter.classList.add('d-none')
         resultsComic.classList.remove('d-none')
     } else if (type === 'personajes'){
-        loadCharacters()
+        loadCharacters('-name')
         resultsComic.classList.add('d-none')
         resultsCharacter.classList.remove('d-none')
     }
